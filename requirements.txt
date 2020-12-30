@@ -1,0 +1,6 @@
+biopython==1.78
+flask==1.1.2
+flask_api==2.0
+matplotlib==3.3.3
+pandas==1.2.0
+scipy==1.5.4

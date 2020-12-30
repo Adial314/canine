@@ -1,0 +1,126 @@
+<!––	CANINE HOMEPAGE
+		Designer:	Austin Dial, A. Seaborn
+    Date:			12/29/2020
+-->
+
+<!DOCTYPE html>
+
+<title>Canine</title>
+
+<html>
+
+<head>
+  <style>
+  	a:link {
+  		color				:	black;
+  		background-color	:	transparent;
+  		text-decoration		:	underline; }
+
+    a:hover {
+  		color				:	black;
+  		background-color	:	yellow;
+  		text-decoration		:	underline; }
+
+    a:visited {
+  		color				:	black;
+  		background-color	:	transparent;
+  		text-decoration		:	underline; }
+
+	h3 {
+    	margin-left			:	5%; }
+
+	p {
+    	margin-left			:	5%;
+        margin-right		:	10%; }
+
+	ul {
+    	padding-left		:	15%;
+        list-style-type		:	bullet;
+        display				:	inline-block; }
+
+    code {
+    	background-color	: 	#EEE;
+        font-weight			:	bold; }
+
+    pre code {
+		background-color	:	#EEE;
+		border				:	1px solid #999;
+		display				:	block;
+		padding				:	20px; }
+
+  </style>
+</head>
+
+<body>
+
+    <h1 style="background-color:#1063AE; color:#FFFFFF; text-align:center;", id="home">Canine</h1>
+    <hr>
+
+    <h2 id="TOC"><a href="#home">Table of Contents</a></h2>
+    <ol>
+    	<li><a href="#introduction">Introduction</a></li>
+        <li><a href="#tutorial">Tutorial</a></li>
+        <ol>
+            <li><a href="#get">GET</a></li>
+        </ol>
+        <li><a href="#version">Version History</a></li>
+        <ol>
+        	<li><a href="#corgi">Corgi</a></li>
+            <ol>
+                    <li><a href="#0-0-0">0.0.0</a></li>
+            </ol>
+        </ol>
+    </ol>
+
+
+    <h2 id="introduction"><a href="#home">Introduction</a></h2>
+
+    <p>Contemporary bioinformatics challenges require agile event-driven pipelines to query, cleanse, and analyze data in support of scientific inquiry. This API handles the process of fetching data from various biological data sources and provides standardized output for analytics pipelines.</p>
+    
+    <p>Canine was developed as a proof of concept for how event-driven microservice patterns powered by Python Flask APIs in conjunction with Kubernetes containerized clusters can revolutionize the study of biology.</p>
+
+<!--     <p>To read the development documentation for this API, please visit <code><a href="http://austindial.pythonanywhere.com/docs">http://austindial.pythonanywhere.com/docs</a></code>.</p> -->
+
+    <h2 id="tutorial"><a href="#home">Tutorial</a></h2>
+
+    <p>End points are added to the primary URL of the API to instruct the system to perform a given task. In this case, add an endpoint to the base URL: <code>http://localhost:8000/...</code> to access its functionality.</p>
+
+        <h3 id="get"><a href="#home">API</a></h3>
+    
+        <p>The API endpoint will connect to a resource and return the specified output according to the argument(s) passed to it. The currently supported arguments are presented below:</p>
+        <ul>
+            <li><a><b>version - </b>sets what version of the API should be used.</a></li>
+            <p><code>.../api?version="0.0.0"</code></p>
+            
+            <li><a><b>user - </b>logs which user is accessing this service by recording their email.</a></li>
+            <p><code>.../api?user="skynet@world.domination"</code></p>
+            
+            <li><a><b>resource - </b>determines the target resource for fetching data.</a></li>
+            <p><code>.../api?resource="ncbi"</code></p>
+            
+            <li><a><b>database - </b>selects which database of the resource will be queried.</a></li>
+            <p><code>.../api?database="nucleotide"</code></p>
+            
+            <li><a><b>term - </b>search term for the query formatted according to the guidelines of the resource or database.</a></li>
+            <p><code>.../api?term='CRT[Gene Name] AND "Plasmodium falciparum"[Organism]'</code></p>
+            
+            <li><a><b>format - </b>the format in which the returned files will be delivered.</a></li>
+            <p><code>.../api?format="gb"</code></p>
+        </ul>
+
+    <h2 id="version"><a href="#home">Version History</a></h2>
+
+        <p>This API is new, experimental, and is designed mostly as a proof of concept for event-driven microservices for bioinformatics tasks using Python Flask APIs and Kubernetes clusters.</p>
+    
+        <p>Release cryptograms follow the names of domesticated canine breeds.</p>
+    
+            <h3 id="corgi"><a href="#home">Corgi</a></h3>
+
+            <p>The beta stage of development (0.X.X) for Canine has been assigned the cryptogram Corgi.</p>
+
+            <h3 id="0-0-0"><a href="#home">0.0.0</a></h3>
+
+            <p>Initial Canine release. It has a single endpoint with a few basic arguments for controlling what data is fetched from its single source. Future releases will support additional databases and will gradually expand the number of supported arguments.</p>
+
+</body>
+</html>
